@@ -1,0 +1,204 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;600&display=swap');
+:root{
+    --title-primary-color: hsl(0, 36%, 70%);
+    --text-content: hsl(0, 93%, 68%);
+    --title-second-color: hsl(0, 6%, 24%);
+    --graddient-background: Linear, 135deg, from hsl(0, 0%, 100%), to hsl(0, 100%, 98%);
+    --gradient-search: Linear, 135deg, from hsl(0, 80%, 86%), to hsl(0, 74%, 74%);
+}
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    font-size: 16px;
+    font-family: 'Josefin Sans', sans-serif;
+    background-image: url("../images/bg-pattern-desktop.svg");
+    background-position: left;
+    background-repeat: no-repeat;
+}
+figure{
+    display: flex;
+}
+.container{
+    width: 90%;
+    padding: 50px 120px 0 120px;
+}
+.main{
+    display: grid;
+    grid-template-columns: 1.2fr 0.9fr;
+    grid-template-rows: 0.3fr max-content;
+    gap: 0px 0px;
+    grid-template-areas:
+        "logo       hero"
+        "contenido  hero";
+}
+.main__hero{
+    grid-area: hero;
+}
+.hero__img{
+    width: 100%;
+    height: 100vh;
+}
+.main__logo{
+grid-area: logo;
+}
+.main__contenido{
+    grid-area: contenido;
+    margin: 5% 0 0 0;
+}
+.contenido__title{
+    color: var(--title-primary-color);
+    font-size: 4em;
+    font-weight: 300;
+    text-transform: uppercase;
+    letter-spacing: .8rem;
+    padding-bottom: .6em;
+}
+.contenido__title span{
+    color: var(--title-second-color);
+    font-weight: 400;
+}
+.contenido__info{
+    color: var(--title-primary-color);
+    font-size: 1.2em;
+    font-weight: 300;
+    line-height: 1.4em;
+    padding-bottom: 1.4em;
+}
+.contenido__email{
+    display: inline-block;
+}
+.input__email{
+    border: solid 1px #ce9797;
+    width: 100%;
+    background: none;
+    padding: 20px;
+    border-radius: 30px;
+    height: 55px;
+}
+.input__email:focus{
+    border: solid 1px #ce9797;
+}
+input{
+    color: var(--title-primary-color);
+}
+*:focus {
+    outline: none;
+}
+input:focus{
+    outline: none;
+    border: none;
+}
+::placeholder{
+    color: var(--title-primary-color);
+}
+.content__error{
+    position: relative;
+    border: none;
+    border-radius: 30px;
+    width: 50px;
+    height: 55px;
+    top: -55px;
+    float: right;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    justify-self: end;
+    visibility: hidden;
+}
+.content__button {
+    position: relative;
+    border: none;
+    border-radius: 30px;
+    width: 100px;
+    height: 55px;
+    background: linear-gradient(135deg, #f8bfbf, #ee8c8c);
+    top: -55px;
+    float: right;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    justify-self: end;
+}
+.icon__email{
+    background-image: url(../images/icon-arrow.svg);
+}
+.icon__error{
+    background-image: url(../images/icon-error.svg);
+}
+.emailOK{
+    font-size: .9rem;
+    margin: 10px 20px;
+    color: var(--title-primary-color);
+}
+@media (max-width:980px) and (min-width:701px){
+    .main{
+        grid-template-columns: 1fr 5fr;
+    }
+}
+@media (max-width:700px) and (min-width:376px){
+    .main{
+        grid-template-columns: 2fr;
+        grid-template-rows: 0.1fr 1fr 0.8fr;
+        justify-content: center;
+        align-items: center;
+        grid-template-areas:
+            "logo logo"
+            "hero hero"
+            "contenido contenido";
+    }
+    .container{
+        text-align: center;
+        padding: 20px 30px;
+        width: 100%;
+    }
+}
+@media (max-width: 375px){
+    body{
+        font-size: 12px;
+        background-image: none;
+    }
+    .container{
+        width: 100%;
+        padding: 20px 30px;
+    }
+    .main{
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: max-content max-content max-content;
+        grid-template-areas:
+            "logo logo"
+            "hero hero"
+            "contenido contenido";
+    }
+    .main__hero{
+        grid-area: hero;
+    }
+    .hero__img{
+        content: url("../images/hero-mobile.jpg");
+        width: 100%;
+        height: auto;
+        padding-bottom: 20px;
+    }
+    .main__logo{
+        grid-area: logo;
+        text-align: center;
+    }
+    .main__contenido{
+        grid-area: contenido;
+        text-align: center;
+    }
+}

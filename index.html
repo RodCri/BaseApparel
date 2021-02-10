@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="author" content="Cristian Camilo Rodriguez">
+  <meta name="keywords" content="Frontend, Mentor">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <title>Frontend Mentor | Base Apparel coming soon page</title>
+  <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+  <div class="main">
+    <figure class="main__hero">
+      <img src="images/hero-desktop.jpg" alt="hero" class="hero__img">
+    </figure>
+    <div class="container main__logo">
+      <img src="images/logo.svg" alt="logo" class="logo__img">
+    </div>
+    <div class="container main__contenido">
+      <h1 class="contenido__title">We're <br><span>coming <br>soon</span></h1>
+      <p class="contenido__info">Hello fellow shoppers! We're currently building our new fashion store. 
+      Add your email below to stay up-to-date with announcements and our launch deals.</p>
+      <input type="text" name="email" id="email" placeholder="Email Address" class="input__email" required="required">
+      <span type="submit" class="content__button">
+        <img src="images/icon-arrow.svg" alt="" class="icon__email">
+      </span>
+      <span type="submit" class="content__error">
+        <img src="images/icon-error.svg" alt="" class="icon__error" id="icon_error">
+      </span>
+      <p class="emailOK" name="emailOK" id="emailOK"></p>
+    </div>
+  </div>
+  <script src="js/main.js"></script>
+</body>
+</html>
