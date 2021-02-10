@@ -1,6 +1,6 @@
 # Frontend Mentor - Base Apparel coming soon page
 
-![alt text](../design/desktop-design.jpg)
+![](design/desktop-design.jpg)
 
 ## Welcome! 👋
 
